@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar{
+            border: solid;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .bar_item{
+            width: 50px;
+            background-color: tomato;
+            height: var(--persent);
+            text-align: center;
+            color: #fff;
+            animation: growth ease-in 0.5s;
+        }
+
+        @keyframes growth {
+            from {
+                opacity: 0;
+                height: calc(var(--persent) - 50%);
+            }
+            to{
+                opacity: 1;
+                height: var(--persent);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bar_item" style="--persent : 10%;">10%</div>
+        <div class="bar_item" style="--persent : 43%;">43%</div>
+        <div class="bar_item" style="--persent : 53%;">53%</div>
+        <div class="bar_item" style="--persent : 12%;">12%</div>
+        <div class="bar_item" style="--persent : 43%;">43%</div>
+        <div class="bar_item" style="--persent : 54%;">54%</div>
+        <div class="bar_item" style="--persent : 76%;">76%</div>
+        <div class="bar_item" style="--persent : 43%;">43%</div>
+        <div class="bar_item" style="--persent : 98%;">98%</div>
+        <div class="bar_item" style="--persent : 21%;">21%</div>
+    </div>
+</body>
+</html>
